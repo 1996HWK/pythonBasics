@@ -1,0 +1,18 @@
+1、打开终端系统，接着你输入"python",将会出现：
+Python 3.7.3 (default, Apr 24 2019, 15:29:51) [MSC v.1915 64 bit (AMD64)] :: Anaconda, Inc. on win32
+
+Warning:
+This Python interpreter is in a conda environment, but the environment has
+not been activated.  Libraries may fail to load.  To activate this environment
+please see https://conda.io/activation
+
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+
+2、迈出i第一步，尝试输入 print("Hello, world!") 按下回车。你将会看到终端输出：
+Hello, world!
+>>>
+
+3、>>> 提示符，可以在它后面输入一些内容，比如说你想输出的内容
+
+
