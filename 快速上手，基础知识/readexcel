@@ -1,0 +1,29 @@
+import xlrd
+
+
+class ReadExcel:
+    def __init__(self, filename):
+        self.workbook = self._open(filename)
+        self.sheet = self._sheet()
+
+    def _open(self, filename):
+        return xlrd.open_workbook(filename)
+
+    def _sheet(self,index=0):
+        return self.workbook.sheets()[index]
+
+    def get_key(self):
+        title = []
+        for key in range(self.sheet.row_len(0)):
+            title.append(self.sheet.cell_value(0, key))
+        return title
+
+    def get_data(self):
+        data = []
+        for row in range(1, self.sheet.nrows):
+            case_data = {}
+            for count, title in enumerate(self.get_key()):
+                case_data[title] = self.sheet.cell_value(row, count)
+            data.append(case_data)
+        print(data)
+
